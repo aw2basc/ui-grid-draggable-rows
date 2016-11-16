@@ -95,11 +95,11 @@
 
             // issue #16
             if (grid.api.hasOwnProperty('edit')) {
-                grid.api.edit.on.beginCellEdit(null, function() {
+                grid.api.edit.on.beginCellEdit($scope, function() {
                     row.setAttribute('draggable', false);
                 });
 
-                grid.api.edit.on.afterCellEdit(null, function() {
+                grid.api.edit.on.afterCellEdit($scope, function() {
                     row.setAttribute('draggable', true);
                 });
             }
